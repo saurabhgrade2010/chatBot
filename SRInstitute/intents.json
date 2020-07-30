@@ -1,0 +1,295 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day","howdy","long time no see"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["Do you have more Queries then choose Yes else Not"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanx","Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["I missed that, say that again?","I didn't get that. Can you repeat?","One more time?","Sorry, what was that?","I missed what you said. What was that?","Sorry, can't understand you", "Please give me more info", "Not sure I understand","I didn't get that. Can you say it again?"],
+         "context": [""]
+        },
+        {"tag": "more_query",
+         "patterns": ["yes","Yeah","yes i have","yoo","sir help me","help me","can you help me","There is some problem","i have a problem","problem"],
+         "responses": ["Please ask your Query"],
+         "context": [""]
+        },
+        {"tag": "no_query",
+         "patterns": ["not","nah","no i do not have more Query"],
+         "responses": ["Okay Good Bye keep in touch"],
+         "context": [""]
+        },
+        {
+        "tag":"information",
+        "patterns":["What is the schedule for next batch?","when is the next batch starting?","What is Machine learning masters?","What is deep learning masters?","send me information related to subjects","course information","subject information"],
+        "responses":["We offer three types of courses . \n1. Machine Learning\n2.Deep LEarning \n3.Artificial Intellegence \nWe have sent the course syllabus and \nother relevant details to you via email. An email has been sent to the Support\n Team with your contact information, you'll be contacted soon.\n Do you have further queries?"],
+        "context":[""]
+        },
+        {
+        "tag":"question_1",
+        "patterns":["Tell me about SRInstitue?","Is it an actual company or fake?","Why choose SRInstitute For Data Science Master Program?","Why choose SRInstitute?","Why choose SRInstitue For Data Science?","Why choose SRInstitute For Deep Learning?","Why choose SRInstitute For courses?"],
+        "responses":["SRInstitue is not only a training institute but also comprises of a team of senior data scientists who have multiple years of experience in data science; deep learning, and machine learning and SRInstitue is also into product development. Thus we have the capabilities to provide hands-on training to our candidates via in-house project contribution."],
+        "context":[""]
+        },
+        {
+        "tag":"salary_prediction",
+        "patterns":["What about my Salary","Salary","Tell me about my salary"],
+        "responses":["Tell me about your Year of Experince "],
+        "context" :[{
+            "tag": "salary_prediction_sub",
+            "patterns" :["month","months","year","years"],
+            "responses" :["What did you say ?"],
+            "context" :["salary-prediction-"]
+            }]
+        },
+		 {
+		  "tag" :"close_chatbot",
+		  "patterns" : ["please close chat","chatbot close","chat bot close","close chat"],
+		  "responses" : ["Okay thank you bye!"],
+		  "context" :[""]
+		 },
+         {
+         "tag" : "about_course",
+         "patterns" :["which type of course are you provide ?","course management"],
+         "responses" :["We offer three types of courses . \n1. Machine Learning\n2.Deep Learning \n3. Natural Language Processing(nlp) \n4.Data Science\n select one course from above mentioned If \n you want to details ?"],
+         "context" :[{
+              "tag" : "course_details",
+              "patterns" :["Machine Learning","Deep Learning","Artificial Intellegence"],
+              "responses" :["We have sent the course syllabus and \nother relevant details to you via email. An email has been sent to the Support\n Team with your contact information, you'll be contacted soon.\n Do you have further queries?"],
+              "context" :[""]
+               }]
+         },
+		 {
+           "tag" :"Questions1",
+           "patterns" : ["What are the eligibility criteria?"],
+           "responses" :["We don't have any eligibility criteria for our programs as we teach from start to end. Thus anybody interested in the course can join. "],
+           "context" :[""]   
+         },
+		 {
+		   "tag" :"Questions2",
+		   "patterns" :["What is the admission process?"],
+		   "responses" :["Step 1:- Discussion with the counselor; \n step 2:- Ask for the demo;\nstep 3:- career goals and objectives;\nstep 4:- enrolment process"],
+		   "context" :[""]
+		 },
+		 {
+		   "tag" :"Questions3",
+		   "patterns" :["Is accommodation provided?"],
+		   "responses" :["No we don't provide any such facilities. Although we have contacts with certain vendors and could make arrangements if required by the candidate."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag" :"Questions4",
+		   "patterns" :["If I am free on someday apart from a class session","can I visit for more support?"],
+		   "responses" :["Sure. You can visit SRInstitute 24/7 and we will be more than happy to help."],
+		   "context" :[""]
+		 },
+		 {
+		 "tag" :"Questions5",
+		 "patterns":["what if we have some problem and we didn't attend class?","What if I miss classes?","What about revisions?","What if we miss one class or two ?","What if I have missed a lecture?","Is there any recordings for the live sessions"],
+		 "responses" :["All sessions will be recorded and will be provided for revision as per the convenience of the candidate."],
+		 "context" :[""]
+		 },
+		 {
+		 "tag" :"Questions6",
+		 "patterns":["If I missed some classes, then can it be rescheduled for me?"],
+		 "responses" :["The recordings for all the classes will be available in the dashboard. The candidate is most welcome to join any of the batches. Also the candidate can reach out for help regarding any issues."],
+		 "context" :[""]
+		 },
+		 {
+		 "tag" :"Questions7",
+		 "patterns":["Is mentors will upload video after live class?","Will recordings be available to revise some of the sessions?"],
+		 "responses" :["All sessions will be recorded and will be provided for revision as per the convenience of the candidate."],
+		 "context" :[""]
+		 },
+		 {
+		 "tag" :"Questions8",
+		 "patterns":["machine learning course fee ?","what is fee for nlp masters","what is the fees structure","fees"],
+		 "responses" :["The course fees for various courses are as follows:\nData Science Masters: INR 40000 +GST;\nMachine Learning Masters: INR 3000 +GST;\nDeep Learning Masters: INR 3000 +GST;\nNLP Masters: INR 3000 +GST"],
+		 "context" :[""]
+		 },
+		 {
+		 "tag" : "Questions9",
+		 "patterns" :["Do I need to buy some other things rather than a laptop?"," Like online material "," books?"],
+		 "responses" :["Everything will be provided by SRInstitue such as Books, Study materials etc."],
+		 "context" :[""]
+		 },
+		 {
+		   "tag":"Questions10",
+		   "patterns" :["Do we have any assignments and projects"],
+		   "responses" :["Yes there are a lot of assignments and projects in all the courses."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions11",
+		   "patterns" :["I have some queries about fees","I have a doubt regarding fee"],
+		   "responses" :["The support team is going to call you soon. You can ask them all your doubts."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions12",
+		   "patterns" :["Are you going to charge anything extra?","is there any additional fees"],
+		   "responses" :["No. There are no hidden charges."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions13",
+		   "patterns" :["classes will be in morning or evening?"],
+		   "responses" :["We have both the options. The suuport team is soon going to call you and your dquestions shall  be answered."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions14",
+		   "patterns" :["What is the procedure to join the course?","can i join the course?","when i can join the course"],
+		   "responses" :["The support team is going to call you soon with all the details"],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions15",
+		   "patterns" :["i want some time to think about joining","I don't want to join the course"],
+		   "responses" :["It's Okay. The support team will call you to get a feedback."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions16",
+		   "patterns" :["What is the process of joining offline courses?","What is the process of joining online courses?","How to join online batch?","How to join offline batch?","when is the next batch starting?","Show me the syllabus","show me the curriculum","show me the curriculum for data science masters"],
+		   "responses" :["An email with all the details have been sent to your email."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions17",
+		   "patterns" :["send me the location of the office","Where is the office located"],
+		   "responses" :["Our Head Office is in Bangalore India. Please check our website for the complete address."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions18",
+		   "patterns" :["Is python a tough language?"],
+		   "responses" :["When compared to other programming languages Python is a bit easier to understand."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions19",
+		   "patterns" :["How much GST is being charged?","What is the GST in course fee?","how much gst we have to pay?"],
+		   "responses" :["The GST is 18 % as per the Government Regulations"],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions20",
+		   "patterns" :["I want to join next month. Do I have to pay same money"],
+		   "responses" :["Yes. The fees won't change."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions21",
+		   "patterns" :["if i don't have time now but i want to join it later?"],
+		   "responses" :["Yes you can. The team will reachout to you and you can discuss your schedule with them."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions22",
+		   "patterns" :["why other courses are for 3000 rupees and data science masters is for 40000 Rupees?"],
+		   "responses" :["Because the DSM course has only 40-50 students. So the attention to individual candidates is more. And it is a combination of all the courses that we provide."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions23",
+		   "patterns" :["why nlp masters is so cheap compared to datascience masters ?"],
+		   "responses" :["Because the DSM course has only 40-50 students. So the attention to individual candidates is more. And it is a combination of all the courses that we provide."],
+		   "context" :[""]
+		 },
+		 {
+		   "tag":"Questions24",
+		   "patterns" :["How will the doubt clearing session take place?","who will clear our doubts?","to whom i can ask my study related doubts?"],
+		   "responses" :["There will be dedicated doubt clearing session for each of the batches for live doubt clearing. You can share your screen and ask your queries. You can also send your queries from the student dashboard"],
+		   "context" :[""]
+		 },
+		 {
+		 "tag" :"Questions25",
+		 "patterns" :["Are the batches Online or offline?","Online teaching mode or offline teaching?","Are the courses Online or offline?","What is good Online or offline?","online or offline","Which mode is good? Online or offline?"],
+		 "responses" :["Both the modes have equal quality of the content delivered. As per your convenience you can choose any of those."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions26",
+		 "patterns" :["Do you conduct inerview sessions also?","what about interviews?"],
+		 "responses" :["We'll conduct atleast 3 mock interviews for candidates just like the original job interview."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions27",
+		 "patterns" :["you will develop our resume?","Will you help with my resume building"],
+		 "responses" :["We are responsible for building your resume. So a well-structured plan will be drawn out for each candidate resume concerning years of experience, projects and technology."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions29",
+		 "patterns" :["how many members are going to join","batch strength?","What will be the number of people in the batch?","What will be the number of people in the course?"],
+		 "responses" :["For the affordable AI courses the strength generally is around 800. For Datascience masters the stenth is not more than 50"],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions30",
+		 "patterns" :["what if i want to stop attending the course"],
+		 "responses" :["A refund is only provided till one month of joining."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions31",
+		 "patterns" :["Where we have to pay?","what are the payment options?"],
+		 "responses" :["You can pay in full or in installments based on the course that you select. You'll get a call from the support tem soon.After your conversation with our support team you'll get a payment link. You can click that link and do the payment."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions32",
+		 "patterns" :["What are the other things we can get from this course"],
+		 "responses" :["1. You'll get free lifetime acces to the material.\n2. Live mentoring and doubt clearing.\n3. Recorded sessions in your dashboard if you miss the class.\n4. Industry project discussions.\n5. Resume Preparation.\n6. Moc interviews"],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions33",
+		 "patterns" :["timing for weekday batches","what is timing for weekday batches","what are the timings of the batches?","What is the next batch schedule?"],
+		 "responses" :["We have sent an email to the support team. They are going to contact you with all these details."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions34",
+		 "patterns" :["Who will be our mentors?","who will take the classes?","Who will be taking the classes?","Who will be teaching the batches?","what about mentors or teachers?","who takes the batches for Deep Learning?","Who will takethe  classes for DL masters?","who takes the classes for DL?","who takes the batches for DL?","who takes the classes for Deep Learning?"],
+		 "responses" :["We have various well qualified SMEs who are real life data scientists. They will be taking your classes"],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions35",
+		 "patterns" :["what about projects?"],
+		 "responses" :["Many industry level projects shall be discussed in the class and many shall be given to you to solve on your own."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions36",
+		 "patterns" :["Is there any installment?","What about installments","Can we pay course fee through installments?"],
+		 "responses" :["An EMI option is available only for the Data Science masters course. You can avail a Zero Cost EMI for 6 months if .\n1.You live in any of the 5 cities:\nNew Delhi\n Mumbai\n Kolkata\n Bangalore\n Chennai."],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions37",
+		 "patterns" :["How many classes will be there per week?","How many classes will be there in a week?"],
+		 "responses" :["Weekly there shall be 3 classes. \n2 Theory and 1 doubt clearing"],
+		 "context" : [""]
+		 },
+		 {
+		 "tag" :"Questions39",
+		 "patterns" :["if i want to join offline?","if i want to join online?","Are there any offline batches?","Are there any online batches?"],
+		 "responses" :["We have both online and offline batches. You can join any one of them as per your convenience."],
+		 "context" : [""]
+		 }
+   ]
+}
